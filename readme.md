@@ -18,6 +18,13 @@
   - [Proposizione](#proposizione-1)
   - [Metodo di eliminazione di Gauss](#metodo-di-eliminazione-di-gauss)
   - [Esempio](#esempio)
+- [Prodotto matrice per vettore](#prodotto-matrice-per-vettore)
+  - [Proprietà](#proprietà)
+  - [Proposizione](#proposizione-2)
+- [Spazi e sottospazi](#spazi-e-sottospazi)
+  - [Spazio vettiriale](#spazio-vettiriale)
+  - [Sottospazio vettiriale](#sottospazio-vettiriale)
+- [Spazio dei polinomi](#spazio-dei-polinomi)
 
 # Introduzione
 
@@ -49,14 +56,14 @@ $$aa'+bb'=0\Rightarrow\text{Le due rette sono ortogonali.}$$
 
 ## Equazioni lineari
 
-Un’equazione lineare nelle incognite $x_1 , . . . , x_k$ a coefficienti reali è
+Un’equazione lineare nelle incognite $x_1 ,\dots, x_k$ a coefficienti reali è
 un’equazione della forma:
 
-$$a_1x_1 + . . . + a_kx_k=b$$
+$$a_1x_1 +\cdots+ a_kx_k=b$$
 
 L’insieme delle soluzioni dell'equazione è:
 
-$$\lbrace(x_1 , . . . , x_n)\in\mathbb{R}^n|a_1x_1+...+a_nx_n=b\rbrace$$
+$$\lbrace(x_1 ,\dots, x_n)\in\mathbb{R}^n|a_1x_1+\cdots+a_nx_n=b\rbrace$$
 
 $$b=0\Leftrightarrow \text{Equazione omogenea}$$
 
@@ -64,15 +71,15 @@ $$\text{Equazioni equivalenti} \Leftrightarrow \text{Stesse soluzioni}$$
 
 ## Sistemi lineari
 
-Un sistema di equazioni lineari $x_1 , . . . , x_n$ a coefficienti reali è un
-insieme di equazioni lineari nelle incognite $x_1 , . . . , x_n$ a coefficienti in
+Un sistema di equazioni lineari $x_1 ,\dots, x_n$ a coefficienti reali è un
+insieme di equazioni lineari nelle incognite $x_1 ,\dots, x_n$ a coefficienti in
 $\mathbb{R}$:
 
 $$
 \begin{cases}
-    a_{11}x_1+...+a_{1n}x_n=b_1\\
+    a_{11}x_1+\cdots+a_{1n}x_n=b_1\\
     \vdots\\
-    a_{m1}x_1+...+a_{mn}x_n=b_m\\
+    a_{m1}x_1+\cdots+a_{mn}x_n=b_m\\
 \end{cases}
 $$
 
@@ -80,11 +87,11 @@ Dato un sistema lineare, l'insieme delle soluzioni è:
 
 $$
 \left\lbrace
-(x_1 , . . . , x_n)\in\mathbb{R}^n\ \big|
+(x_1 ,\dots, x_n)\in\mathbb{R}^n\ \big|
 \begin{cases}
-    a_{11}x_1+...+a_{1n}x_n=b_1\\
+    a_{11}x_1+\cdots+a_{1n}x_n=b_1\\
     \vdots\\
-    a_{m1}x_1+...+a_{mn}x_n=b_m\\
+    a_{m1}x_1+\cdots+a_{mn}x_n=b_m\\
 \end{cases}
 \right\rbrace
 $$
@@ -102,24 +109,24 @@ Su $\mathbb{R}^n$ esistono due operazioni naturali:
 - ### Somma
 
 $$\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R}^n$$
-$$(x_1,...,x_n)+(y_1,...,y_n)=(x_1y_1,...,x_ny_n)$$
+$$(x_1,\dots,x_n)+(y_1,\dots,y_n)=(x_1y_1,\dots,x_ny_n)$$
 
 - ### Prodotto per scalare
 
 $$\mathbb{R}\times\mathbb{R}^n\rightarrow\mathbb{R}^n$$
 
-$$\lambda(x_1,...,x_n)=(\lambda x_1,...,\lambda x_n)$$
+$$\lambda(x_1,\dots,x_n)=(\lambda x_1,\dots,\lambda x_n)$$
 
 Dato un sistema lineare:
 
 $$
 \begin{cases}
-    a_{11}x_1+...+a_{1n}x_n=b_1\\
+    a_{11}x_1+\cdots+a_{1n}x_n=b_1\\
     \vdots\\
-    a_{m1}x_1+...+a_{mn}x_n=b_m\\
+    a_{m1}x_1+\cdots+a_{mn}x_n=b_m\\
 \end{cases}\\
 \space\\
-(x_1 , . . . , x_n)\in\mathbb{R}^n=soluzione\\
+(x_1 , \dots, x_n)\in\mathbb{R}^n=soluzione\\
 \Leftrightarrow\\
 x_1
     \begin{pmatrix}
@@ -127,7 +134,7 @@ x_1
         \vdots\\
         a_{m1}
     \end{pmatrix}
-+ \dots + x_n
++ \cdots + x_n
     \begin{pmatrix}
         a_{1n}\\
         \vdots\\
@@ -166,9 +173,9 @@ Una matrice $m\times n$ a coefficienti in $\mathbb{R}$ = tabella con $m$ righe e
 
 $$
 A=\begin{pmatrix}
-    a_{11}&\dots&a_{1n}\\
+    a_{11}&\cdots&a_{1n}\\
     \vdots&&\vdots\\
-    a_{m1}&\dots&a_{mn}
+    a_{m1}&\cdots&a_{mn}
 \end{pmatrix}
 $$
 
@@ -227,9 +234,9 @@ Dato un sistema lineare:
 
 $$
 \begin{cases}
-    a_{11}x_1+...+a_{1n}x_n=b_1\\
+    a_{11}x_1+\cdots+a_{1n}x_n=b_1\\
     \vdots\\
-    a_{m1}x_1+...+a_{mn}x_n=b_m\\
+    a_{m1}x_1+\cdots+a_{mn}x_n=b_m\\
 \end{cases}\\
 $$
 
@@ -237,9 +244,9 @@ Matrice dei coefficienti o incompleta:
 
 $$
 A=(a_{ij}) =\begin{pmatrix}
-    a_{11}&\dots&a_{1n}\\
+    a_{11}&\cdots&a_{1n}\\
     \vdots&&\vdots\\
-    a_{m1}&\dots&a_{mn}
+    a_{m1}&\cdots&a_{mn}
 \end{pmatrix}
 $$
 
@@ -338,3 +345,94 @@ I + 2\cdot IV\\II + IV\\III + 2\cdot IV\\I\leftrightarrow IV\\
 \right)\\\ \\
 b_2\neq0\Rightarrow\text{Il sistema non ha soluzione}
 $$
+
+# Prodotto matrice per vettore
+
+Data una matrice $m\times n$:
+
+$$A = (a_{ij})$$
+
+ed un vettore colonna:
+
+$$
+B=\begin{pmatrix}
+    b_1\\
+    \vdots\\
+    b_n
+\end{pmatrix}
+$$
+
+il prodotto $AB$ è definito come il vettore:
+
+$$AB=b_1A_1+\cdots+b_nA_n$$
+
+(colonna per riga)
+
+Introdotto il vettore delle incognite:
+
+$$
+X=\begin{pmatrix}
+    x_1\\
+    \vdots\\
+    x_n
+\end{pmatrix}
+$$
+
+un sistema lineare con matrice completa (A|B) può essere scritto nella forma:
+
+$$AX=B$$
+
+## Proprietà
+
+Siano $A$, $B$ matrici $m\times n$ e siano $X$, $Y$ vettori con $n$ componenti; sia $\lambda$
+uno scalare, vale che:
+
+1. $A(X+Y)=AX+AY$;
+2. $(A+B)X=AX+AB$;
+3. $A(\lambda X)=\lambda(AX)$.
+
+## Proposizione
+
+Data $A\in M_{m,n} (\mathbb{R})$, sia $W$ l'insieme delle soluzioni del sistema lineare
+omogeneo $AX = 0$. Dato $B\in R_n$, se il sistema lineare $AX = B$ ammette
+una soluzione $X_0$, le sue soluzioni sono tutte e soli i vettori:
+
+$$X_0 + Y\in\mathbb{R}^n,$$
+
+al variare di $Y\in W$.
+
+# Spazi e sottospazi
+
+## Spazio vettiriale
+
+Uno spazio vettoriale reale è un insieme V su cui sono definite due
+operazioni:
+
+$$V\times V\rightarrow V,\quad(v,w)\rightarrow v+w$$
+
+$$\mathbb{R}\times V\rightarrow V,\quad(a,v)\rightarrow av$$
+
+che soddisfano le seguenti proprietà:
+
+- $(v+w)+u=v+(w+u)$;
+- $\exist 0\in V | V+0=V=0+V$;
+- $v+(-1)v=0=(-1)v+v$;
+- $v+w=w+v$;
+- $\lambda(\mu v)=(\lambda\mu)v$;
+- $\lambda(v+w)=(\lambda v)+(\lambda w)$;
+- $(\lambda+\mu)v=\lambda v+\mu v$;
+- $1v=v$;
+- Elemento $V$ = vettore;
+- Elemento $\mathbb{R}$ = scalare.
+
+## Sottospazio vettiriale
+
+Dato uno spazio vettoriale V, un sottospazio di V è $W\subset V\ |$ :
+
+- $0\in W$
+- $v,w\in W\Rightarrow v+w\in W$
+- $v\in W\land c\in\mathbb{R}\Rightarrow cv\in W$
+
+Il sottospazio $W\subset V$ è ancora uno spazio vettoriale.
+
+# Spazio dei polinomi
