@@ -351,7 +351,9 @@ I\leftrightarrow IV\\
 0 & 3 & 3 & 8
 \end{array}
 \right)\\
-\ \\
+$$
+
+$$
 b_2\neq0\Rightarrow\text{Il sistema non ha soluzione}
 $$
 
