@@ -415,7 +415,7 @@ $$\mathbb{R}\times V\rightarrow V,\quad(a,v)\rightarrow av$$
 che soddisfano le seguenti proprietà:
 
 - $(v+w)+u=v+(w+u)$;
-- $\exist 0\in V | V+0=V=0+V$;
+- $\exists 0\in V | V+0=V=0+V$;
 - $v+(-1)v=0=(-1)v+v$;
 - $v+w=w+v$;
 - $\lambda(\mu v)=(\lambda\mu)v$;
