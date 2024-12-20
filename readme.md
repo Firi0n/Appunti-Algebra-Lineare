@@ -333,13 +333,19 @@ $$
 
 $$
 \left(\begin{array}{ccc|c}
-2 & 1 & 3 & 2\\1 & -1 & 0 & 3\\2 & 0 & 2 & 1\\-1 & 1 & 0 & 3
+2 & 1 & 3 & 2\\
+1 & -1 & 0 & 3\\
+2 & 0 & 2 & 1\\
+-1 & 1 & 0 & 3
 \end{array}
 \right)\begin{array}{c}
 I + 2\cdot IV\\II + IV\\III + 2\cdot IV\\I\leftrightarrow IV\\
 \end{array}\rightarrow
 \left(\begin{array}{ccc|c}
--1 & 1 & 0 & 3\\0 & 0 & 0 & 6\\0 & 2 & 2 & 7 \\0 & 3 & 3 & 8
+-1 & 1 & 0 & 3\\
+0 & 0 & 0 & 6\\
+0 & 2 & 2 & 7 \\
+0 & 3 & 3 & 8
 \end{array}
 \right)\\\ \\
 b_2\neq0\Rightarrow\text{Il sistema non ha soluzione}
