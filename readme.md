@@ -124,10 +124,20 @@ $$
     a_{11}x_1+\cdots+a_{1n}x_n=b_1\\
     \vdots\\
     a_{m1}x_1+\cdots+a_{mn}x_n=b_m\\
-\end{cases}\\
-\space\\
-(x_1 , \dots, x_n)\in\mathbb{R}^n=soluzione\\
-\Leftrightarrow\\
+\end{cases}
+$$
+
+<br>
+
+$$
+(x_1 , \dots, x_n)\in\mathbb{R}^n=soluzione
+$$
+
+$$
+\Leftrightarrow
+$$
+
+$$
 x_1\begin{pmatrix}
         a_{11}\\
         \vdots\\
