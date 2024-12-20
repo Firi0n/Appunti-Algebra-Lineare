@@ -438,7 +438,7 @@ Il sottospazio $W\subset V$ è ancora uno spazio vettoriale.
 # Spazio dei polinomi
 
 Sia $a:N\rightarrow R$ una funzione:
-$$(i\rightarrow a_i | \exist n\in\mathbb{N}\ |\ \forall i\in[0, n]\ .\ a_i\neq 0)$$
+$$(i\rightarrow a_i | \exists n\in\mathbb{N}\ |\ \forall i\in[0, n]\ .\ a_i\neq 0)$$
 
 Polinomio a coefficienti reali nell'indeterminata $x$:
 
