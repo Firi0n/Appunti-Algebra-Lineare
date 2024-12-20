@@ -128,19 +128,16 @@ $$
 \space\\
 (x_1 , \dots, x_n)\in\mathbb{R}^n=soluzione\\
 \Leftrightarrow\\
-x_1
-    \begin{pmatrix}
+x_1\begin{pmatrix}
         a_{11}\\
         \vdots\\
         a_{m1}
-    \end{pmatrix}
-+ \cdots + x_n
+    \end{pmatrix} + \cdots + x_n
     \begin{pmatrix}
         a_{1n}\\
         \vdots\\
         a_{mn}
-    \end{pmatrix}
-=
+    \end{pmatrix} =
     \begin{pmatrix}
         b_1\\
         \vdots\\
