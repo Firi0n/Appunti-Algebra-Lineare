@@ -14,6 +14,8 @@
     - [Matrice incompleta, completa](#matrice-incompleta-completa)
   - [Sistemi e matrici a scala](#sistemi-e-matrici-a-scala)
   - [Proposizione](#proposizione)
+- [Eliminazione di Gauss](#eliminazione-di-gauss)
+  - [Proposizione](#proposizione-1)
 
 # Introduzione
 
@@ -278,7 +280,19 @@ $$
 Dato un sistema lineare a coefficienti in $\mathbb{R}$ di $m$ equazioni in $n$ incognite
 la cui matrice incompleta è a scala con $r$ pivot:
 
-- $\exist i\in[r+1,m]\ |\ b_i\neq 0\Rightarrow$ non esiste soluzione;
+- $\exists i\in[r+1,m]\ |\ b_i\neq 0\Rightarrow$ non esiste soluzione;
 - $\forall i\in[r+1,m]\ |\ b_i=0\Rightarrow$ esiste una soluzione:
   - $r=n\Rightarrow$ la soluzione è unica;
   - $r<n\Rightarrow$ le soluzioni sono in corrispondenza biunivoca con $\mathbb{R}^{n-r}$.
+
+# Eliminazione di Gauss
+
+## Proposizione
+
+Applicando a un sistema lineare una delle seguenti operazioni:
+
+1. moltiplicare un'equazione per uno scalare diverso da 0;
+2. scambiare due equazioni;
+3. aggiungere a un'equazione un multiplo di un'altra,
+
+si ottiene un sistema lineare equivalente.
