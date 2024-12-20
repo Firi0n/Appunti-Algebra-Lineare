@@ -436,3 +436,19 @@ Dato uno spazio vettoriale V, un sottospazio di V è $W\subset V\ |$ :
 Il sottospazio $W\subset V$ è ancora uno spazio vettoriale.
 
 # Spazio dei polinomi
+
+Sia $a:N\rightarrow R$ una funzione:
+$$(i\rightarrow a_i | \exist n\in\mathbb{N}\ |\ \forall i\in[0, n]\ .\ a_i\neq 0)$$
+
+Polinomio a coefficienti reali nell'indeterminata $x$:
+
+$$p=a_0x^0+\cdots a_nx^n$$
+
+Per costruzione, 0 è un polinomio ($\forall i\in[0, n]\ .\ a_i=0$);
+
+Il grado di $p\neq0$ viene indicato con $deg\ p$ ed è uguale a $n$, $deg\ 0 =-\infty$;
+
+L'insieme dei polinomi a coefficienti reali nell'indeterminata $x$ si
+indica con $\mathbb{R}[x]$.
+
+Lo spazio dei polinomi ha una struttura di spazio vettoriale.
