@@ -339,7 +339,10 @@ $$
 -1 & 1 & 0 & 3
 \end{array}
 \right)\begin{array}{c}
-I + 2\cdot IV\\II + IV\\III + 2\cdot IV\\I\leftrightarrow IV\\
+I + 2\cdot IV\\
+II + IV\\
+III + 2\cdot IV\\
+I\leftrightarrow IV\\
 \end{array}\rightarrow
 \left(\begin{array}{ccc|c}
 -1 & 1 & 0 & 3\\
@@ -347,7 +350,8 @@ I + 2\cdot IV\\II + IV\\III + 2\cdot IV\\I\leftrightarrow IV\\
 0 & 2 & 2 & 7 \\
 0 & 3 & 3 & 8
 \end{array}
-\right)\\\ \\
+\right)\\
+\ \\
 b_2\neq0\Rightarrow\text{Il sistema non ha soluzione}
 $$
 
