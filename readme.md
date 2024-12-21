@@ -25,6 +25,11 @@
   - [Spazio vettiriale](#spazio-vettiriale)
   - [Sottospazio vettiriale](#sottospazio-vettiriale)
 - [Spazio dei polinomi](#spazio-dei-polinomi)
+- [Combinazioni lineari](#combinazioni-lineari)
+- [Spazio generato](#spazio-generato)
+- [Dipendenza lineare](#dipendenza-lineare)
+- [Basi](#basi)
+  - [Proposizione](#proposizione-3)
 
 # Introduzione
 
@@ -470,3 +475,58 @@ L'insieme dei polinomi a coefficienti reali nell'indeterminata $x$ si
 indica con $\mathbb{R}[x]$.
 
 Lo spazio dei polinomi ha una struttura di spazio vettoriale.
+
+# Combinazioni lineari
+
+Dati due vettori:
+
+- $v_1,\dots,v_k$ di uno spazio vettoriale V
+- $a_1,\dots,a_k$ di scalari
+
+Il vettore:
+
+$$a_1v_1,\dots,a_kv_k$$
+
+è una combinazione lineare di $v_1,\dots,v_k$.
+
+Una combinazione lineari si definisce **banale** se:
+
+$$\forall i\in[1,k]\ .\ a_i=0$$
+
+<br>
+
+$$k=0\Rightarrow 0\in V\text{combinazione lineare di 0 vettori}$$
+
+# Spazio generato
+
+Dato uno spazio vettoriale $V$ e vettori $v_1,\dots,v_k\in V$ si dice spazio generato da $v_1,\dots,v_k$ l'insieme dei vettori che sono combinazioni lineari di $v_1,\dots,v_k$:
+
+$$Span\lbrace v_1,\dots,v_k\rbrace=\lbrace a_1v_1+\cdots+a_kv_k|a_1,\dots,a_k\in\mathbb{R}\rbrace$$
+
+Lo spazio generato è un sottospazio.
+
+Se $W$ è un sottospazio di V che contiene $v_1,\dots,v_k$, allora W contiene Span{$v_1,\dots,v_k$}.
+
+Quindi Span{$v_1,\dots,v_k$} è il più piccolo sottospazio di $V$ che contiene $v_1,\dots,v_k$.
+
+# Dipendenza lineare
+
+$$\exists i\in[1,k]|a_i\neq 0\land a_1v_1+\cdots+a_kv_k=0\Rightarrow\\v_1,\dots,v_k\text{ sono linearmente dipendenti}$$
+
+$$(\exists\text{ una combinazione lineare di }v_1,\dots,v_k\text{ non banale pari a 0 }\Rightarrow\\v_1,\dots,v_k\text{ sono linearmente dipendenti.})$$
+
+Vattore linearmente dipandente $\Leftrightarrow$ è 0.+
+
+Due vettori sono linearmente dipendenti $\Leftrightarrow$ uno dei due è multiplo dell'altro.
+
+# Basi
+
+Se $v1,\dots,vk$ sono vettori linearmente indipendenti che generano $V$, si dice che i vettori $v1,\dots,vk$ formano una base di V o che l’insieme {$v1,\dots,vk$} è una base di V.
+
+## Proposizione
+
+Data una matrice $A,n\times n$, sono equivalenti:
+
+- le colonne $A^1,\dots,A^n$ sono una base;
+- $\exists$ una riduzione a scala di $A$ con $n$ pivot;
+- ogni riduzione a scala di $A$ ha $n$ pivot.
