@@ -511,9 +511,15 @@ Quindi Span{$v_1,\dots,v_k$} è il più piccolo sottospazio di $V$ che contien
 
 # Dipendenza lineare
 
-$$\exists i\in[1,k]|a_i\neq 0\land a_1v_1+\cdots+a_kv_k=0\Rightarrow\\v_1,\dots,v_k\text{ sono linearmente dipendenti}$$
+$$
+\exists i\in[1,k]|a_i\neq 0\land a_1v_1+\cdots+a_kv_k=0\Rightarrow\\
+v_1,\dots,v_k\text{ sono linearmente dipendenti}
+$$
 
-$$(\exists\text{ una combinazione lineare di }v_1,\dots,v_k\text{ non banale pari a 0 }\Rightarrow\\v_1,\dots,v_k\text{ sono linearmente dipendenti.})$$
+$$
+(\exists\text{ una combinazione lineare di }v_1,\dots,v_k\text{ non banale pari a 0 }\Rightarrow\\
+v_1,\dots,v_k\text{ sono linearmente dipendenti.})
+$$
 
 Vattore linearmente dipandente $\Leftrightarrow$ è 0.+
 
