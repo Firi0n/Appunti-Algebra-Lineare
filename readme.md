@@ -521,13 +521,13 @@ $$
 v_1,\dots,v_k\text{ sono linearmente dipendenti.})
 $$
 
-Vattore linearmente dipandente $\Leftrightarrow$ è 0.+
+Vattore linearmente dipandente $\Leftrightarrow$ è 0.
 
 Due vettori sono linearmente dipendenti $\Leftrightarrow$ uno dei due è multiplo dell'altro.
 
 # Basi
 
-Se $v1,\dots,vk$ sono vettori linearmente indipendenti che generano $V$, si dice che i vettori $v1,\dots,vk$ formano una base di V o che l’insieme {$v1,\dots,vk$} è una base di V.
+Se $v1,\dots,vk$ sono vettori linearmente indipendenti che generano $V$, si dice che i vettori $v1,\dots,vk$ formano una base di V o che l’insieme $\lbrace v1,\dots,vk\rbrace$ è una base di V.
 
 ## Proposizione
 
