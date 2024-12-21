@@ -38,6 +38,9 @@
   - [Corollario](#corollario-1)
   - [Proposizione](#proposizione-4)
 - [Esistenza della base](#esistenza-della-base)
+- [Spazio somma e spazio intersezione](#spazio-somma-e-spazio-intersezione)
+  - [Proposizione](#proposizione-5)
+- [Formula di Grassmann](#formula-di-grassmann)
 
 # Introduzione
 
@@ -602,3 +605,28 @@ Se $V$ ha dimensione $n$ e $W\subseteq V$ è un sottospazio, allora $dim\ W\leq
 Sia $V$ uno spazio vettoriale di dimensione $n$ e siano $v_1,\dots,v_k$ elementi linearmente indipendenti di $V$. Allora esistono vettori $v_{k+1},\dots,v_n$ tali
 che i vettori $v_1,\dots,v_n$ formano una base di $V$.
 Si dice che $v_1,\dots,v_n$ è un completamento della base.
+
+# Spazio somma e spazio intersezione
+
+Sia $V$ uno spazio vettoriale; siano $U,W\subseteq V$ sottospazi:
+
+- $U\cap W$ è un sottospazio;
+- In generale $U\cup W$ non è un sottospazio;
+- Si definisce $U+W=\lbrace u+w|u\in U,w\in W\rbrace$;
+- $U+W$ è un sottospazio;
+- Si dice che $U$ e $W$ sono in somma diretta se $U\cap W = \lbrace 0\rbrace$;
+- $V=U+W\land U\cap W=\lbrace0\rbrace\Rightarrow V=U\oplus W\land W\text{ è complemento di }U$.
+
+## Proposizione
+
+$$
+V=U\oplus W\Leftrightarrow\text{ ogni vettore di }V\text{ si
+scrive in modo unico come }u+w, u\in U\land w\in W.
+$$
+
+# Formula di Grassmann
+
+Sia $V$ uno spazio vettoriale di dimensione finita,
+e siano $U,W\subseteq V$ sottospazi. Allora:
+
+$$dim(U+W)+dim(U\cap W) = dim(U)+dim(W)$$
