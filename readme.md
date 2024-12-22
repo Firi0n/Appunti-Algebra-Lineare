@@ -49,6 +49,9 @@
 - [Immagine](#immagine)
   - [Teorema](#teorema-2)
   - [Corollario](#corollario-2)
+- [Isomorfismi](#isomorfismi)
+- [Matrice associata](#matrice-associata)
+  - [Casi notevoli](#casi-notevoli)
 
 # Introduzione
 
@@ -745,4 +748,115 @@ $$
 $$
 f:V\rightarrow W|dim\ V=dim\ W<+\infty\Rightarrow\\
 f\ iniettiva\Leftrightarrow f\ suriettiva.
+$$
+
+# Isomorfismi
+
+Date applicazioni lineari:
+
+$$f:V\rightarrow W,g:W\rightarrow U$$
+
+la composizione:
+
+$$g\circ f:V\rightarrow U$$
+
+è un'applicazione lineare.
+
+- Un'applicazione lineare $f:V\rightarrow W$ è un isomorfismo se è biunivoca.
+- Due spazi vettoriali sono isomorfi se esiste un isomorfismo tra di essi.
+
+$$f:V\rightarrow W\text{ è un isomorfismo}\Rightarrow f^{-1}:W\rightarrow V\text{ è un isomorfismo}$$
+
+- $B=\lbrace v_1,\dots,v_n\rbrace\text{ base di }V\Rightarrow M_B:V\rightarrow\mathbb{R}^n\text{ è un isomorfismo.}$
+- Ogni spazio vettoriale di dimensione finita è isomorfo a $\mathbb{R}^n$.
+
+Dato $B=\lbrace v_1,\dots,v_n\rbrace$ una base di $V$, abbiamo isomorfismo:
+
+$$M_B:V\rightarrow\mathbb{R}^n,M_B(v_i)=e_i$$
+
+# Matrice associata
+
+Siano:
+
+- $V,W$ spazi vettoriali su $\mathbb{R}$;
+- $v_1,\dots,v_n$ vettori di $V$ che formano una base $B$;
+- $w_1,\dots,w_n$ vettori di $W$ che formano una base $B'$;
+- $f:V\rightarrow W$ un'applicazione lineare.
+
+Otteniamo isomorfismi:
+
+$$M_B:V\rightarrow\mathbb{R}^n,M_{B'}:W\rightarrow\mathbb{R}^m$$
+
+```mermaid
+flowchart LR
+  V-->|f|W
+  V-->|$$M_B$$|Rn
+  W-->|"$$M_{B'}$$"|Rm
+  Rn["$$\mathbb{R}^n$$"]---|$$L_A$$|Rm["$$\mathbb{R}^m$$"]
+```
+
+$A$ è la matrice associata a $f$ rispetto alle basi $B, B'$; scriviamo:
+
+$$M^B_{B'}(f)=A$$
+
+Equivalentemente:
+
+La matrice associata a $f$ è l’unica matrice $M^B_{B'}$ che soddisfa:
+
+$$M^B_{B'}(f)M_B(v)=M_{B'}(f(v))$$
+
+## Casi notevoli
+
+$$
+V=\mathbb{R}^n, W=\mathbb{R}^m\land B,B'=\text{basi canoniche}\Rightarrow\\
+M^B_{B'}(f)\text{ soddisfa }Av=f(v), cioé\ f=L_A
+$$
+
+$$
+W=\mathbb{R}^m\land C=\text{base canonica}\Rightarrow\\
+M^B_C(f)=(f(v_1),\dots,f(v_n))
+$$
+
+In generale, la colonna j-esima di $M^B_{B'}(f)$ è il vettore (colonna) delle coordinate di $f(v_j)$ rispetto a $B'$.
+
+$$
+B,B'\text{ basi di }V\Rightarrow M_{B'}(v)=M^B_{B'}(Id)M_B(v)
+$$
+
+La matrice $M^B_{B'}(Id)$ è la matrice del cambiamento di base da $B$ a $B'$
+
+Siano:
+
+$$
+\begin{pmatrix}
+  x_1\\
+  \vdots\\
+  x_n
+\end{pmatrix}=\text{coordinate di v rispetto a B}
+$$
+
+$$
+\begin{pmatrix}
+  y_1\\
+  \vdots\\
+  y_n
+\end{pmatrix}=\text{coordinate di v rispetto a B'}
+$$
+
+allora:
+
+$$
+\begin{pmatrix}
+  y_1\\
+  \vdots\\
+  y_n
+\end{pmatrix}=M^B_{B'}(Id)\begin{pmatrix}
+  x_1\\
+  \vdots\\
+  x_n
+\end{pmatrix}
+$$
+
+$$
+B\land B'\ coincidono\Leftrightarrow M^B_{B'}(Id)=I
 $$
