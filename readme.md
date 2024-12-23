@@ -52,6 +52,9 @@
 - [Isomorfismi](#isomorfismi)
 - [Matrice associata](#matrice-associata)
   - [Casi notevoli](#casi-notevoli)
+- [Rango](#rango)
+  - [Teorema di Rouchè-Capelli](#teorema-di-rouchè-capelli)
+- [Prodotto di matrici](#prodotto-di-matrici)
 
 # Introduzione
 
@@ -860,3 +863,29 @@ $$
 $$
 B\land B'\ coincidono\Leftrightarrow M^B_{B'}(Id)=I
 $$
+
+# Rango
+
+Il rango (per colonne) di una matrice $A\in M_{m,n}(\mathbb{R})$ è $rank\ A = dim\ Im\ A$.
+
+Il rango per righe di una matrice $A\in M_{m,n}(\mathbb{R})$ è la dimensione
+di $Span\lbrace A_1,\dots,A_m\rbrace\subseteq M_{1,n}(\mathbb{R})=\mathbb{R}^n$
+
+Il rango per righe di $A$ è il rango per colonne di $A^t$.
+
+Data una matrice $A\in M_{m,n}(\mathbb{R})$:
+
+$$rank\ A=rank\ A^t$$
+
+(Il rango per righe è uguale al rango per colonne)
+
+## Teorema di Rouchè-Capelli
+
+Sia $A\in M_{m,n}(\mathbb{R}),B\in\mathbb{R}^n$:
+
+$$Ax=b\Leftrightarrow rank(A) = rank(A|B)$$
+
+# Prodotto di matrici
+
+Data un'applicazione lineare $L_A:\mathbb{R}^n\rightarrow\mathbb{R}^m,\exists$
+un'unica matrice $A\in M_{m,n}(\mathbb{R})|L_A(X)=AX$
