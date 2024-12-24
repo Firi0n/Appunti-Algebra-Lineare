@@ -59,6 +59,8 @@
   - [Proposizione](#proposizione-7)
 - [Matrice identica e inversa](#matrice-identica-e-inversa)
   - [Caratterizzazione delle matrici invertibili](#caratterizzazione-delle-matrici-invertibili)
+  - [Inversa matrici 2x2](#inversa-matrici-2x2)
+- [Composizioni e matrici associate](#composizioni-e-matrici-associate)
 
 # Introduzione
 
@@ -1012,4 +1014,42 @@ Sia $A$ una matrice $n\times n$. Sono equivalenti:
 - le colonne di $A$ sono linearmente indipendenti $(Rank\ A = n)$;
 - ogni matrice ottenuta da $A$ applicando l'eliminazione di Gauss ha n pivot;
 - il sistema $AX=0$ ha solo la soluzione banale;
-- il sistema $AX=B$ ha un'unica soluzione $\forall\ B$
+- il sistema $AX=B$ ha un'unica soluzione $\forall\ B$.
+
+L'inversa di A è la matrice B ottenuta trasformando con operazioni elementari:
+
+$$(A|I)\rightarrow(I|B)$$
+
+## Inversa matrici 2x2
+
+Se:
+
+$$
+A=\begin{pmatrix}
+  a & b\\
+  c & d
+\end{pmatrix}
+$$
+
+allora:
+
+$$
+A^{-1}=\frac{1}{ad-bc}\begin{pmatrix}
+  d & -b\\
+  -c & a
+\end{pmatrix}
+$$
+
+# Composizioni e matrici associate
+
+Siano $V,W,U$ tre spazi vettoriali, e siano $B,B',B''$ rispettivamente basi di $V,W,U$.
+
+Siano:
+
+$$f:V\rightarrow W,\quad g:W\rightarrow U$$
+
+applicazioni lineari. Allora:
+
+$$M^{B'}_{B''}(g)M^{B}_{B''}(f)=M^{B}_{B''}(g\circ f)$$
+
+Siano $B\land B'$ due basi di $V\Rightarrow$ le matrice del cambiamento da una base all'altra sono una l'inversa dell'altra.
