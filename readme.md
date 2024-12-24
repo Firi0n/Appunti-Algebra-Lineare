@@ -55,6 +55,10 @@
 - [Rango](#rango)
   - [Teorema di Rouchè-Capelli](#teorema-di-rouchè-capelli)
 - [Prodotto di matrici](#prodotto-di-matrici)
+  - [Proprietà del prodotto di matrici](#proprietà-del-prodotto-di-matrici)
+  - [Proposizione](#proposizione-7)
+- [Matrice identica e inversa](#matrice-identica-e-inversa)
+  - [Caratterizzazione delle matrici invertibili](#caratterizzazione-delle-matrici-invertibili)
 
 # Introduzione
 
@@ -889,3 +893,123 @@ $$Ax=b\Leftrightarrow rank(A) = rank(A|B)$$
 
 Data un'applicazione lineare $L_A:\mathbb{R}^n\rightarrow\mathbb{R}^m,\exists$
 un'unica matrice $A\in M_{m,n}(\mathbb{R})|L_A(X)=AX$
+
+Data una matrice $m\times n$:
+
+$$A=(a_{ij})$$
+
+e una matrice $n\times k$:
+
+$$B=(b_{ij})$$
+
+possiamo considerare la composizione:
+
+$$\mathbb{R}^k\overset{L_B}{\rightarrow}\mathbb{R}^n\overset{L_A}{\rightarrow}\mathbb{R}^m,\quad X\rightarrow L_A(L_B(X))=A(B(X))$$
+
+---
+
+$$L_A\circ L_B=L_C\Rightarrow C^i=L_A(L_B(e_i))=AB^i$$
+
+---
+
+Data una matrice $m\times n$:
+
+$$A=(a_{ij})$$
+
+e una matrice $n\times k$:
+
+$$B=(b_{ij})$$
+
+definiamo il prodotto $AB$ come la matrice $m\times k$:
+
+$$AB=(AB^1,\dots,AB^k).$$
+
+La j-esima colonna di $AB$ è:
+
+$$
+A\begin{pmatrix}
+  b_{1j}\\
+  \vdots\\
+  b_{nj}
+\end{pmatrix}=b_{1j}A^1+\cdots+b_{nj}A^n=\begin{pmatrix}
+  b_{1j}a_{11}+\cdots+b_{nj}a_{1n}\\
+  \vdots\\
+  b_{1j}a_{m1}+\cdots+b_{nj}a_{mn}
+\end{pmatrix}
+$$
+
+## Proprietà del prodotto di matrici
+
+$$AB=(c_{ij})\Rightarrow c_{ij}=\sum_{h=1}^na_{ih}b_{hj}=A_iB_j$$
+
+- la i-esima riga di $AB$ è:
+
+$$(AB)_i=A_iB;$$
+
+- la j-esima colonna di AB è:
+
+$$(AB)^j=AB^j$$
+
+Date due matrici $A\land B$:
+
+$$A=m\times n\land B = n\times k\Rightarrow\text{il prodotto è ben definito}$$
+
+$$A=m\times n\land B = m\times n\Rightarrow\text{la somma è ben definita}$$
+
+## Proposizione
+
+Siano $A=(a_ij), B=(b_ij), C=(c_ij)$ tre matrici e $\lambda$ uno scalare:
+
+$$AB,AC,B+C\text{ ben definiti}\Rightarrow A(B+C)=AB+AC$$
+
+$$AC,BC,A+B\text{ ben definiti}\Rightarrow (A+B)C=AC+BC$$
+
+$$AC\text{ ben definiti}\Rightarrow A(\lambda C)=\lambda (AC)$$
+
+$$AB,BC\text{ ben definiti}\Rightarrow A(BC)=(AB)C$$
+
+# Matrice identica e inversa
+
+La matrice identità $I\in M_{n,n}(\mathbb{R})$ è la matrice:
+
+$$
+I = (e_1 \cdots e_n) = \begin{pmatrix}
+1 & \cdots &  &  &  \\
+\vdots & 1 &  &  &  \\
+ &  & \ddots &  &  \\
+ &  &  & 1 & \cdots \\
+ &  &  &  & \ddots \\
+ &  &  &  &  & 1
+\end{pmatrix}
+$$
+
+assocoiata all'applicazione identica $\mathbb{R}^n\rightarrow\mathbb{R}^n,\quad v\rightarrow v$.
+
+In particolare:
+
+$$AI=A=IA$$
+
+Data $A\in M_{n,n}(\mathbb{R})$:
+
+- $\exist B\in M_{n,n}(\mathbb{R})|AB=I=BA\Rightarrow A\text{ invertibile}$
+- B è inversa di A, $B=A^{-1}$
+
+Allora:
+
+$$A\text{ è invertibile}\Leftrightarrow L_A:\mathbb{R}^n\rightarrow\mathbb{R}^n\text{ è invertibile}$$
+
+$$B\text{ è l'inversa di }A\Rightarrow L_B\text{ è l'inversa di }L_A$$
+
+## Caratterizzazione delle matrici invertibili
+
+Sia $A$ una matrice $n\times n$. Sono equivalenti:
+
+- $A$ è invertibile;
+- $L_A$ è invertibile;
+- $L_A$ è iniettiva;
+- $L_A$ è suriettiva;
+- le righe di $A$ sono linearmente indipendenti;
+- le colonne di $A$ sono linearmente indipendenti $(Rank\ A = n)$;
+- ogni matrice ottenuta da $A$ applicando l'eliminazione di Gauss ha n pivot;
+- il sistema $AX=0$ ha solo la soluzione banale;
+- il sistema $AX=B$ ha un'unica soluzione $\forall\ B$
