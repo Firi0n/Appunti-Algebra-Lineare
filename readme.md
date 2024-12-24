@@ -991,7 +991,7 @@ $$AI=A=IA$$
 
 Data $A\in M_{n,n}(\mathbb{R})$:
 
-- $\exist B\in M_{n,n}(\mathbb{R})|AB=I=BA\Rightarrow A\text{ invertibile}$
+- $\exists B\in M_{n,n}(\mathbb{R})|AB=I=BA\Rightarrow A\text{ invertibile}$
 - B è inversa di A, $B=A^{-1}$
 
 Allora:
