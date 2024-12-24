@@ -1086,7 +1086,7 @@ $$\text{ due matrici }A,B\in M_{n,n}(K)\text{ sono simili}\Leftarrow\exists\text
 - un endomorfismo $f:V\rightarrow V$ è diagonalizzabile se rispetto a qualche base la matrice associata è diagonale;
 - una matrice quadrata $A$ è diagonalizzabile $\Leftrightarrow L_A$ è diagonalizzabile.
 
-$$f\text{ è diagonalizzabile}\Leftrightarrow\exist\text{ una base }v_1,\dots,v_n\in V|f(v_i)=\lambda_iv_i$$
+$$f\text{ è diagonalizzabile}\Leftrightarrow\exists\text{ una base }v_1,\dots,v_n\in V|f(v_i)=\lambda_iv_i$$
 
 # Numeri complessi
 
