@@ -82,6 +82,19 @@
 - [Polinomio caratteristico](#polinomio-caratteristico)
 - [Molteplicità algebrica e geometrica](#molteplicità-algebrica-e-geometrica)
 - [Criteri di diagonalizzazione](#criteri-di-diagonalizzazione)
+- [Prodotto scalare euclideo](#prodotto-scalare-euclideo-1)
+  - [Proprietà del prodotto scalare euclideo](#proprietà-del-prodotto-scalare-euclideo)
+- [Distanza](#distanza)
+- [Disuguaglianza triangolare](#disuguaglianza-triangolare)
+  - [Teorema di Cauchy-Schwarz](#teorema-di-cauchy-schwarz)
+  - [Disuguaglianza triangolare](#disuguaglianza-triangolare-1)
+- [Angoli](#angoli)
+- [Complemento ortogonale](#complemento-ortogonale)
+- [Proiezione ortogonale](#proiezione-ortogonale)
+- [Basi ortonormali e algoritmo di Gram-Schmidt](#basi-ortonormali-e-algoritmo-di-gram-schmidt)
+  - [Teorema di Gram-Schmidt](#teorema-di-gram-schmidt)
+  - [Algoritmo di Gram-Schmidt](#algoritmo-di-gram-schmidt)
+- [Teorema spettrale](#teorema-spettrale)
 
 # Introduzione
 
@@ -1340,3 +1353,153 @@ Sia $f$ un endomorfismo di uno spazio vettoriale $V$ su $K$:
 
 $f$ ha tutti gli autovalori in $K$ e ogni autovalore ha molteplicità algebrica uno $\Rightarrow$
 f è diagonalizzabile.
+
+# Prodotto scalare euclideo
+
+Definiamo il prodotto scalare euclideo (o prodotto scalare standard) su
+$\mathbb{R}^n$ l'applicazione:
+
+$$\mathbb{R}^n\times\mathbb{R}^n\rightarrow\mathbb{R},\quad v\cdot w=(v^t)w,$$
+
+Lo spazio vettoriale $\mathbb{R}^n$ dotato del prodotto scalare euclideo è detto
+spazio euclideo.
+
+$$
+v=\begin{pmatrix}
+  x_1\\
+  \vdots\\
+  x_n
+\end{pmatrix},\quad w = \begin{pmatrix}
+  y_1\\
+  \vdots\\
+  y_n
+\end{pmatrix}\Rightarrow v\cdot w=\sum_{i=1}^n x_iy_i.
+$$
+
+## Proprietà del prodotto scalare euclideo
+
+Il prodotto scalare soddisfa le seguenti proprietà:
+
+- $v\cdot w=w\cdot v$
+- $v\cdot(w+u)=v\cdot w+v\cdot u\ \land\ (v+w)\cdot u=v\cdot u+w\cdot u$
+- $(\lambda v)\cdot w=\lambda(v\cdot w)=v\cdot(\lambda w)$
+- $\forall v\neq 0\ .\ v\cdot v>0\land v\cdot v=0\Leftrightarrow v=0$
+
+Dato $v\in\mathbb{R}^n$, la norma di v è il numero reale non negativo:
+
+$$\Vert v\Vert=\sqrt{v\cdot v}.$$
+
+Dato un vettore v ed uno scalare $\lambda$ vale:
+
+$$\Vert\lambda v\Vert=|\lambda|\cdot\Vert v\Vert$$
+
+# Distanza
+
+Dati due punti $P\land Q\in\mathbb{R}^n$, la distanza tra essi è:
+
+$$d(P,Q)=\Vert P-Q\Vert.$$
+
+- Nel caso di punti del piano otteniamo il teorema di pitagora:
+
+$$
+\left\Vert
+\begin{pmatrix}
+  x_1\\
+  y_1
+\end{pmatrix},
+\begin{pmatrix}
+  x_2\\
+  y_2
+\end{pmatrix}
+\right\Vert=\sqrt{(x_1-x_2)^2+(y_2-y_1)^2}.
+$$
+
+# Disuguaglianza triangolare
+
+## Teorema di Cauchy-Schwarz
+
+Dati due vettori $V,W\in\mathbb{R}^n$, vale la disuguaglianza:
+
+$$v\cdot w\leq\Vert v\Vert\Vert w\Vert.$$
+
+## Disuguaglianza triangolare
+
+Dati due vettori $V,W\in\mathbb{R}^n$, vale:
+
+$$\Vert v+w\Vert\leq\Vert v\Vert+\Vert w\Vert.$$
+
+# Angoli
+
+Siano $u,v$ vettori non nulli di $\mathbb{R}^n$
+
+- Si definisce l'angolo tra $u\land v$ l'unico $\theta\in[o,\pi]$ che soddisfa la relazione:
+
+$$\cos\theta=\frac{u\cdot v}{\Vert u\Vert\Vert v\Vert};$$
+
+- $Span\ u = Span\ v\Rightarrow u\land v$ sono paralleli;
+- $u\cdot v = 0\Rightarrow u\bot v$ (ortogonali);
+
+# Complemento ortogonale
+
+Se W è un sottospazio di $\mathbb{R}^n$, l'insieme dei vettori ortogonali a tutti i
+vettori di W è il complemento ortogonale a W; Si indica con:
+
+$$W^\bot=\lbrace v\in V\vert\forall w\in W\ .\ v\cdot w=0\rbrace$$
+
+- è un sottospazio vettoriale;
+- vale:
+
+$$\mathbb{R}^n=W\oplus W^\bot;$$
+
+- In particolare:
+
+$$dim\ W+dim\ W^\bot=n.$$
+
+# Proiezione ortogonale
+
+Fissato un vettore $u\neq 0\in\mathbb{R}^n$, ogni vettore $v\in\mathbb{R}^n$ si scompone in modo unico come:
+
+$$v=v_1+v_2,$$
+
+| $v_1$ è ortogonale a u e $v_2$ è parallelo a u.
+
+# Basi ortonormali e algoritmo di Gram-Schmidt
+
+- I vettori di $v_1,\dots,v_n\in\mathbb{R}^n$ si dicono ortogonali se:
+
+$$
+v_i\cdot v_j=\begin{cases}
+1&i=j\\
+0&i\neq j
+\end{cases}
+$$
+
+- Una base ortonormale è una base di $\mathbb{R}^n$ formata da vettori ortonormali.
+- $B=\lbrace v_1,\dots,v_n\rbrace$ è una base ortonormale di autovettori $\Rightarrow$ le
+  coordinate $x_1,\dots,x_n$ di un vettore w soddisfano:
+
+$$x_1=v_1\cdot w ,\dots,x_n=v_n\cdot w.$$
+
+## Teorema di Gram-Schmidt
+
+$$v_1,\dots,v_k\text{ sono vettori ortonormali di un sottospazio }V\in\mathbb{R}^n\Rightarrow$$
+
+$$\exists\text{ una base ortonormale di }V\text{ della forma }v_1,\dots,v_n.$$
+
+## Algoritmo di Gram-Schmidt
+
+Sia $v_1,\dots,v_n$ una base di $\mathbb{R}^n$.
+L'algoritmo di Gram-Schmidt produce una
+base ortonormale $\hat{v_1},\dots,\hat{v_n}\text{ di }\mathbb{R}^n$ come segue:
+
+- Si pone $\tilde{v_1}=v_1$.
+- Per $k=2,\dots,n$, si pone $\tilde{v_k}=v_k-(u_1+\cdots+u_{k-1})$,
+  dove $u_j$ è la proiezione ortogonale di $v_k$ su $\tilde{v_j}$.
+- $\forall j:[1,n]\ .\ \hat{v_j}=\frac{\tilde{v_j}}{\Vert\tilde{v_j}\Vert}$
+
+$$Span\lbrace v_1,\dots,v_j\rbrace = Span\lbrace\hat{v_1},\dots,\hat{v_j}\rbrace.$$
+
+# Teorema spettrale
+
+Ogni matrice simmetrica ha una base ortonormale di autovettori; in
+particolare, è diagonalizzabile.
